@@ -1,7 +1,109 @@
 {
   "name": "react-tippin-button",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "The Tippin.me web button implemented as a React component",
   "author": "Daryl Wright <daryl@goldenpath.ca>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "source": "src/index.tsx",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "tippin",
+    "bitcoin",
+    "lightning",
+    "sats",
+    "react",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "microbundle --css-modules true src/index.tsx",
+    "develop": "microbundle watch --css-modules true src/index.tsx",
+    "clean": "rimraf ./dist",
+    "format": "eslint . --fix --ext ts --ext tsx",
+    "lint": "eslint . --ext ts --ext tsx",
+    "lint-styles": "stylelint \"src/**/*.scss\"",
+    "type-check": "tsc --pretty --noEmit"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-react": "^7.18.6",
+    "@types/react": "^17.0.38",
+    "@types/react-css-modules": "^4.6.4",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import-quotes": "^0.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.23.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^4.1.2",
+    "sass": "^1.58.2",
+    "stylelint": "^14.3.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "typescript": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goldenpathtechnologies/react-tippin-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goldenpathtechnologies/react-tippin-button/issues"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/exec",
+      "@semantic-release/git"
+    ],
+    "preset": "conventionalcommits",
+    "parserOpts": {
+      "noteKeywords": [
+        "BREAKING CHANGE",
+        "BREAKING CHANGES",
+        "BREAKING"
+      ]
+    },
+    "writerOpts": {
+      "commitsSort": [
+        "subject",
+        "scope"
+      ]
+    },
+    "prepareCmd": "npx genversion --semi --double --es6 src/version.ts",
+    "assets": [
+      "package.json",
+      "src/version.ts",
+      "CHANGELOG.md"
+    ],
+    "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+  }
 }
