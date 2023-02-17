@@ -1,16 +1,9 @@
 import { useState } from "react";
 import { ReactNodeLike } from "prop-types";
-import classNames from "classnames";
 import * as s from "./tippin-button.module.scss";
 
 type TippinButtonProps = {
   userName: string;
-  // AES_KEY?: string;
-  // AES_IV?: string;
-  // apiOrigin?: string;
-  // baseUrlWS?: string;
-  // debugLogFn?: () => void;
-  // basePrefix?: string;
   subPath?: string;
   children: ReactNodeLike;
 };
@@ -20,17 +13,18 @@ const closeButtonImage = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdo
 export default function TippinButton(
   {
     userName,
-    // AES_KEY,
-    // AES_IV,
-    // apiOrigin,
-    // baseUrlWS,
-    // debugLogFn,
-    // basePrefix,
     subPath,
     children,
   }: TippinButtonProps,
 ): JSX.Element {
   const [showModalTippin, setShowModalTippin] = useState(false);
+  const showModalTippinStyles = showModalTippin ? ` ${s.showModalTippin}` : ``;
+  const modalTippinContainerStyles = `${s.modalTippinContainer}${showModalTippinStyles}`;
+  const handleModalKeyDownClose = (key: string): void => {
+    if ([`Escape`, `Enter`, ` `].includes(key)) {
+      setShowModalTippin(false);
+    }
+  };
 
   return (
     <div>
@@ -41,17 +35,24 @@ export default function TippinButton(
       >
         {children}
       </button>
-      {/* TODO: Sort out a11y issues with modal overlay. */}
       <div
-        className={classNames(s.modalTippinContainer, { [s.showModalTippin]: showModalTippin })}
+        className={modalTippinContainerStyles}
         onClick={() => setShowModalTippin(false)}
+        onKeyDown={(e) => {
+          handleModalKeyDownClose(e.key);
+        }}
+        role="none"
+        tabIndex={-1}
       >
         <div className={s.modalTippinContent}>
-          {/* eslint-disable-next-line max-len */}
-          {/* TODO: Consider if closeButtonTippin should be a button or not due to existence of click event. */}
           <div
             className={s.closeButtonTippin}
             onClick={() => setShowModalTippin(false)}
+            onKeyDown={(e) => {
+              handleModalKeyDownClose(e.key);
+            }}
+            role="button"
+            tabIndex={-1}
           >
             <img
               className={s.closeText}
@@ -71,11 +72,5 @@ export default function TippinButton(
 }
 
 TippinButton.defaultProps = {
-  // AES_KEY: `83W6V!31SP82J1#9T3W2V!81S!8PY1$9`,
-  // AES_IV: `to1qcxmsq938l7fb`,
-  // apiOrigin: `https://api.tippin.me`,
-  // baseUrlWS: `wss://api.tippin.me/v2_ws`,
-  // debugLogFn: () => {},
-  // basePrefix: `/`,
   subPath: `https://tippin.me/`,
 };
