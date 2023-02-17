@@ -2,7 +2,7 @@
   "name": "react-tippin-button",
   "version": "1.0.0",
   "description": "The Tippin.me web button implemented as a React component",
-  "author": "Daryl Wright <daryl@goldenpath.ca>",
+  "author": "Daryl G. Wright <daryl@goldenpath.ca>",
   "license": "MIT",
   "type": "module",
   "source": "src/index.tsx",
@@ -15,6 +15,12 @@
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "keywords": [
     "tippin",
     "bitcoin",
