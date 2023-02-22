@@ -1,0 +1,30 @@
+{
+  "name": "react-tippin-button-docs",
+  "private": true,
+  "description": "Documentation for the react-tippin-button library",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run copy-external && gatsby build",
+    "develop": "yarn run copy-external && gatsby develop",
+    "start": "yarn run copy-external && gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "copy-external": "rimraf ./external && mkdir external && copyfiles -f ../src/index.tsx ../README.md ./external"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.3.0",
+    "gatsby": "^5.6.1",
+    "gatsby-plugin-mdx": "^5.6.0",
+    "gatsby-source-filesystem": "^5.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-gatsby": "^2.14.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^4.1.2",
+    "styled-components": "^5.3.6"
+  }
+}
