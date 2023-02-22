@@ -1,3 +1,5 @@
-graphql-types.ts
-declaration.d.ts
 src/version.ts
+node_modules
+dist
+docs/public
+.cache

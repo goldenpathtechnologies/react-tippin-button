@@ -20,7 +20,7 @@
     },
     "ecmaVersion": 11,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": ["./tsconfig.json", "./docs/tsconfig.json"]
   },
   "plugins": ["react", "@typescript-eslint", "import-quotes"],
   "rules": {
@@ -47,7 +47,6 @@
       }
     }],
     "import-quotes/import-quotes": [2, "double"],
-    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   }
 }
