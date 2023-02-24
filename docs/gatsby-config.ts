@@ -8,6 +8,8 @@ import { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   plugins: [
+    `gatsby-plugin-pnpm`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

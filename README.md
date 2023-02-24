@@ -1,39 +1,50 @@
-# ⚡ React Tippin.me Web Button ⚡
+# <span>⚡</span> React Tippin.me Web Button <span>⚡</span>
 
 The Tippin.me web button reimagined as a React component, with more customization options and 
-accessibility features. 
+accessibility features.
 
-## 🎬 Demo
+<p>
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+</p>
+
+## <span>🎬</span> Demo
 
 See the improved Tippin.me web button in action [here](#TBA).
 
-## 🛠 Installation
+## <span>🛠</span> Installation
+
+PNPM:
 
 ```bash
-# npm
-npm install react-tippin-button
-
-# yarn
-yarn install react-tippin-button
-
-# pnpm
 pnpm add react-tippin-button
 ```
 
-## 👨‍💻 Usage
+NPM:
 
-## 📋 Properties
+```bash
+npm install react-tippin-button
+```
 
-## 🎨 Customization
+Yarn:
 
-## 🤦🏿‍♂️ Issues
+```bash
+yarn install react-tippin-button
+```
 
-## 📃 License
+## <span>👨‍💻</span> Usage
+
+## <span>📋</span> Properties
+
+## <span>🎨</span> Customization
+
+## <span>🤦🏿‍♂️</span> Issues
+
+## <span>📃</span> License
 
 This project is [MIT](https://github.com/goldenpathtechnologies/react-tippin-button/blob/main/LICENSE) 
 licensed.
 
-## ⚖ Legal notice
+## <span>⚖</span> Legal notice
 
 The Tippin.me logo, image assets, Tippin card, and all associated branding are properties owned by 
 Tippin Group. Golden Path Technologies Inc. is in no way affiliated with Tippin Group. Users of this 

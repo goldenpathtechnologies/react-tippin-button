@@ -5,25 +5,36 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "yarn run copy-external && gatsby build",
-    "develop": "yarn run copy-external && gatsby develop",
-    "start": "yarn run copy-external && gatsby develop",
+    "build": "pnpm run copy-external && gatsby build",
+    "develop": "pnpm run copy-external && gatsby develop",
+    "start": "pnpm run copy-external && gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "copy-external": "rimraf ./external && mkdir external && copyfiles -f ../src/index.tsx ../README.md ./external"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.14",
     "@mdx-js/react": "^2.3.0",
+    "autoprefixer": "^10.4.13",
     "gatsby": "^5.6.1",
     "gatsby-plugin-mdx": "^5.6.0",
     "gatsby-source-filesystem": "^5.6.0",
+    "prismjs": "^1.29.0",
+    "prism-themes": "^1.9.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
+    "@types/prismjs": "^1.26.0",
+    "@types/react-css-modules": "^4.6.4",
+    "babel-plugin-prismjs": "^2.1.0",
     "babel-preset-gatsby": "^2.14.0",
     "copyfiles": "^2.4.1",
+    "gatsby-plugin-pnpm": "^1.2.10",
+    "gatsby-plugin-postcss": "^6.7.0",
+    "postcss": "^8.4.21",
     "rimraf": "^4.1.2",
     "styled-components": "^5.3.6"
   }

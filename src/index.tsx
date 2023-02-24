@@ -64,7 +64,6 @@ const ModalContent = styled.div`
   transform: translate(-50%, -50%);
   width: 396px;
   height: 623px;
-  border-radius: 0.5rem; /*Rounded shadowed borders*/
   border-radius: 5px;
 `;
 
@@ -108,8 +107,6 @@ export default function TippinButton(
   }: TippinButtonProps,
 ): JSX.Element {
   const [showModalTippin, setShowModalTippin] = useState(false);
-  // const showModalTippinStyles = showModalTippin ? ` ${s.showModalTippin}` : ``;
-  // const modalTippinContainerStyles = `${s.modalTippinContainer}${showModalTippinStyles}`;
 
   const handleModalKeyDownClose = (key: string): void => {
     if ([`Escape`, `Enter`, ` `].includes(key)) {
