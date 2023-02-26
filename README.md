@@ -1,11 +1,10 @@
 # <span>⚡</span> React Tippin.me Web Button <span>⚡</span>
 
-The Tippin.me web button reimagined as a React component, with more customization options and 
-accessibility features.
+The Tippin.me web button reimagined as a React component, with more customization options. It's now easier to accept 
+Bitcoin payments via the Lightning Network in your React applications. 
 
-<p>
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-</p>
+[![tippin.me](https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@GoldenPathTech/F0918E)](https://tippin.me/@GoldenPathTech)
 
 ## <span>🎬</span> Demo
 
@@ -31,13 +30,46 @@ Yarn:
 yarn install react-tippin-button
 ```
 
-## <span>👨‍💻</span> Usage
+## <span>👨‍💻</span> Basic usage
+
+```tsx
+<TippinButton
+    userName="TippinUserName"
+    className="CSS Classes"
+    style={{ backgroundColor: `blue` }}
+>
+    Enter text, images, etc.
+</TippinButton>
+```
+
+See the [demo](#TBD) for more examples.
 
 ## <span>📋</span> Properties
 
-## <span>🎨</span> Customization
+| Attribute           | Description                                                                                                                     |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| userName (required) | \[string] Your Tippin.me user name                                                                                              |
+| className           | \[string] CSS class attribute for the Tippin button only, other UI elements can not be customized                               |
+| style               | \[object] CSS style attribute for the Tippin button only, other UI elements can not be customized                               |
+| subPath             | \[string] The root URL for the Tippin.me service, defaults to "https://tippin.me/" (this should not be changed in normal usage) |
+| children (required) | \[string or JSX.Element] The Tippin button tag can not be empty and must contain text or another component                      |
 
 ## <span>🤦🏿‍♂️</span> Issues
+
+Please report any issues with this software
+[here](https://github.com/goldenpathtechnologies/react-tippin-button/issues). If you would like to contribute to 
+this project, feel free to fork it and send a pull request. Note that this project is governed by a
+[code of conduct](#TBD).
+
+## <span>💡</span> Motivation
+
+The idea for this project came to me as I was attempting to integrate the Tippin.me web button in another React 
+project. This required me to reverse engineer some parts of the web button. The work piled up to the point where it 
+made sense to make the React Tippin Button into a separate library, but it was such a minor feature that it didn't 
+make sense to do so. I didn't have a lot of experience publishing NPM packages, so I decided to go all out on this 
+one to simultaneously create a template for future libraries that include a project documentation site. If you don't 
+find the Tippin Button particularly useful, this project should also serve as a useful template for creating high 
+quality libraries that are publishable on NPM.
 
 ## <span>📃</span> License
 

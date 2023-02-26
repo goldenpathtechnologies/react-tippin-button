@@ -5,6 +5,7 @@
  */
 
 import { GatsbyConfig } from "gatsby";
+import remarkGfm from "remark-gfm";
 
 const config: GatsbyConfig = {
   plugins: [
@@ -14,6 +15,11 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        mdxOptions: {
+          remarkPlugins: [
+            remarkGfm,
+          ],
+        },
       },
     },
     {

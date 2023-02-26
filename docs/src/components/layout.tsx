@@ -13,7 +13,7 @@ export default function Layout({ element, props }: LayoutProps): JSX.Element {
     //  for the wrapPageElement does not reveal any discernible type information for the
     //  `apiCallbackContext` object denoted by `LayoutProps`.
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <div {...props} className="[&>*]:mb-4 container mx-auto p-5 max-w-5xl bg-amber-50">
+    <div {...props} className="[&>*]:mb-4 [&>a]:inline-block container mx-auto p-5 max-w-5xl bg-amber-50">
       {element}
     </div>
   );
