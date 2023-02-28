@@ -33,6 +33,10 @@ yarn install react-tippin-button
 ## <span>👨‍💻</span> Basic usage
 
 ```tsx
+import TippinButton from "react-tippin-button";
+
+// ...
+
 <TippinButton
     userName="TippinUserName"
     className="CSS Classes"
