@@ -13,6 +13,8 @@ on:
       - LICENSE
       - README.md
       - tsconfig.json
+      - .github/workflows/docs.yml
+      - "docs/**"
     tags-ignore:
       - "**"
 
@@ -21,21 +23,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: ${{secrets.GH_TOKEN}}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
+
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Verify build
-        run: yarn run build
+        run: pnpm run build
 
       - name: Run semantic-release
         env:
