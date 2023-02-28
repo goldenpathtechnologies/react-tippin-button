@@ -69,17 +69,18 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-        working-directory: ${{ env.working-directory }}
+        with:
+          static_site_generator: gatsby
+          generator_config_file: ./docs/gatsby-config.ts
       - name: Restore cache
         uses: actions/cache@v3
         with:
           path: |
-            public
-            .cache
+            ./docs/public
+            ./docs/.cache
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
-        working-directory: ${{ env.working-directory }}
       - name: Install dependencies
         run: ${{ steps.set-package-manager.outputs.manager }} ${{ steps.set-package-manager.outputs.command }}
       - name: Build with Gatsby
@@ -89,8 +90,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
-        working-directory: ${{ env.working-directory }}
+          path: ./docs/public
 
   # Deployment job
   deploy:
