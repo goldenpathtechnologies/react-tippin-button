@@ -97,7 +97,8 @@
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/exec",
-      "@semantic-release/git"
+      "@semantic-release/git",
+      "@semantic-release/github"
     ],
     "preset": "conventionalcommits",
     "parserOpts": {
