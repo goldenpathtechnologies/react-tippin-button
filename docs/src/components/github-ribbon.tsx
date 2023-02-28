@@ -1,7 +1,6 @@
 export default function GithubRibbon(): JSX.Element {
   return (
-    // TODO: Put URL info in GraphQL data.
-    <a href="https://github.com/goldenpathtechnologies">
+    <a href="https://github.com/goldenpathtechnologies/react-tippin-button">
       <img
         decoding="async"
         loading="lazy"

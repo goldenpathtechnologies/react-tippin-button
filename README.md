@@ -1,14 +1,14 @@
 # <span>⚡</span> React Tippin.me Web Button <span>⚡</span>
 
-The Tippin.me web button reimagined as a React component, with more customization options. It's now easier to accept 
-Bitcoin payments via the Lightning Network in your React applications. 
+The Tippin.me web button reimagined as a customizable React component. Easily accept Bitcoin payments via the Lightning
+Network in your React applications.
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![tippin.me](https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@GoldenPathTech/F0918E)](https://tippin.me/@GoldenPathTech)
 
 ## <span>🎬</span> Demo
 
-See the improved Tippin.me web button in action [here](#TBA).
+See the improved Tippin.me web button in action [here](https://react-tippin-button.goldenpath.ca/demo/).
 
 ## <span>🛠</span> Installation
 
@@ -42,7 +42,7 @@ yarn install react-tippin-button
 </TippinButton>
 ```
 
-See the [demo](#TBD) for more examples.
+See the [demo](https://react-tippin-button.goldenpath.ca/demo/) for more examples.
 
 ## <span>📋</span> Properties
 
@@ -59,7 +59,7 @@ See the [demo](#TBD) for more examples.
 Please report any issues with this software
 [here](https://github.com/goldenpathtechnologies/react-tippin-button/issues). If you would like to contribute to 
 this project, feel free to fork it and send a pull request. Note that this project is governed by a
-[code of conduct](#TBD).
+[code of conduct](https://github.com/goldenpathtechnologies/react-tippin-button/blob/main/CODE_OF_CONDUCT.md).
 
 ## <span>💡</span> Motivation
 

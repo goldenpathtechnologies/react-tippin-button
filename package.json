@@ -4,6 +4,7 @@
   "description": "The Tippin.me web button reimagined as a React component",
   "author": "Daryl G. Wright <daryl@goldenpath.ca>",
   "license": "MIT",
+  "private": true,
   "type": "module",
   "source": "src/index.tsx",
   "exports": {
