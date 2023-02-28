@@ -12,7 +12,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "prepare-content": "pnpm run reset-external && pnpm run copy-external && pnpm run rename-license",
-    "copy-external": "copyfiles -f ../src/index.tsx ../README.md ../LICENSE ../CODE_OF_CONDUCT.md ./external",
+    "copy-external": "copyfiles -f ../src/index.tsx ../README.md ../LICENSE ../CODE_OF_CONDUCT.md ../CHANGELOG.md ./external",
     "reset-external": "rimraf ./external && mkdir external",
     "rename-license": "renamer --find LICENSE --replace LICENSE.md external/LICENSE"
   },

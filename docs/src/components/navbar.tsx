@@ -8,6 +8,7 @@ export default function Navbar(): JSX.Element {
     { name: `Home`, url: `/` },
     { name: `Demo`, url: `/demo/` },
     { name: `Code of Conduct`, url: `/code-of-conduct/` },
+    { name: `Changelog`, url: `/changelog/` },
     { name: `License`, url: `/license/` },
   ];
 
