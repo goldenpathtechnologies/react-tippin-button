@@ -1,6 +1,6 @@
 {
   "name": "react-tippin-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Tippin.me web button reimagined as a customizable React component.",
   "author": "Daryl G. Wright <daryl@goldenpath.ca>",
   "license": "MIT",
