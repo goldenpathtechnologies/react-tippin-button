@@ -3,7 +3,11 @@
 The Tippin.me web button reimagined as a customizable React component. Easily accept Bitcoin payments via the Lightning
 Network in your React applications.
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/goldenpathtechnologies/react-tippin-button)
+[![Release](https://github.com/goldenpathtechnologies/react-tippin-button/actions/workflows/release.yml/badge.svg)](https://github.com/goldenpathtechnologies/react-tippin-button/actions/workflows/release.yml)
+[![Deploy Documentation Site to Pages](https://github.com/goldenpathtechnologies/react-tippin-button/actions/workflows/docs.yml/badge.svg)](https://github.com/goldenpathtechnologies/react-tippin-button/actions/workflows/docs.yml)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+![GitHub](https://img.shields.io/github/license/goldenpathtechnologies/react-tippin-button)
 [![tippin.me](https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@GoldenPathTech/F0918E)](https://tippin.me/@GoldenPathTech)
 
 ## <span>🎬</span> Demo

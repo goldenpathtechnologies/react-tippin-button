@@ -19,7 +19,7 @@ export default function Layout({ element, props }: LayoutProps): JSX.Element {
       */}
 
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <div {...props} className="[&>*]:mb-4 [&>a]:inline-block container mx-auto p-5 max-w-5xl bg-amber-50">
+      <div {...props} className="[&>*]:mb-4 [&>a]:inline-block [&>img]:inline-block [&>img]:align-baseline container mx-auto p-5 max-w-5xl bg-amber-50">
         {element}
       </div>
     </>

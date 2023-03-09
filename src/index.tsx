@@ -130,10 +130,12 @@ export default function TippinButton(
               alt="Tippin modal close button"
             />
           </CloseButton>
-          <ModalContentPortal
-            title={`Tippin user card for ${userName}`}
-            src={`${subPath}${subPath.slice(-1) !== `/` ? `/` : ``}userCard?special=true&u=${userName}`}
-          />
+          {showModalTippin && (
+            <ModalContentPortal
+              title={`Tippin user card for ${userName}`}
+              src={`${subPath}${subPath.slice(-1) !== `/` ? `/` : ``}userCard?special=true&u=${userName}`}
+            />
+          )}
         </ModalContent>
       </ModalContainer>
     </div>
